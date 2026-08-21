@@ -1,10 +1,17 @@
-import React from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App'
-import './index.css' // optional, create if you want global styles
+/* global pendo */
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "./index.css"; // optional, create if you want global styles
 
-createRoot(document.getElementById('root')).render(
+pendo.initialize({
+  visitor: {
+    id: "",
+  },
+});
+
+createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
-)
+  </React.StrictMode>,
+);
